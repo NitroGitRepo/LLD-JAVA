@@ -1,0 +1,6 @@
+1)This keyword can be used to refer current class instance variable;
+2)This keyword can be used to invoke current class method;
+3)This keyword can be used to invoke current class constructor;
+4)This keyword can be used to pass as an argument in method call;
+5)This keyword can be used to pass as an argument in constructor call;
+6)This keyword can be used to return current class instance from a method.
