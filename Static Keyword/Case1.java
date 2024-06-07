@@ -5,7 +5,7 @@ class Case1
       System.out.println("Non Static Method");
    }
    static void display()
-   {   int a = this.a;
+   {   //int a = this.a;
 	   System.out.println("Static Method"+a);
    }
    public static void main(String[] args)

@@ -5,7 +5,11 @@ class Case2
 	   System.out.println("Static Block");
 	}
 
-    public static void main(String[] args)
+    static 
+	{
+		System.out.println("Static Block-2");
+	}
+	public static void main(String[] args)
 	{ 
 	   System.out.println("Main Method");
     }

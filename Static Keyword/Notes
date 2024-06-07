@@ -1,0 +1,16 @@
+Static is a non access modifier and it can be used with 
+-> variable
+-> method
+-> inner class
+-> block
+
+-> static variable belongs to the class not to the object
+
+-> static method belongs to the class not to the object.
+-> static method can be accessed directly without creating object of that class.
+-> static method can acess only static data. It cannot access no-static data.
+-> static method can call only static method. It cannot call not static method.
+-> static method cannot refer this or super keyword
+
+->static block
+static block executes automatically when class is loaded intyo the memory but jdk version should be less than 1.6
