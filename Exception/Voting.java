@@ -18,5 +18,5 @@ class Voting
 		 {
 		     System.out.println("handled");
 		 }
-	   }
+	  }
 }
