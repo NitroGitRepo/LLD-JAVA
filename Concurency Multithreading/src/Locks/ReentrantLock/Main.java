@@ -6,9 +6,10 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class Main {
     public static void main(String[] args) {
-        ReentrantLock lock = new ReentrantLock();
+        ReentrantLock lock = new ReentrantLock(true);
 
         SharedResources sharedResource1 = new SharedResources();
+
         Thread thread1 = new Thread(()->{
             sharedResource1.produce(lock);
         });
@@ -22,3 +23,6 @@ public class Main {
         thread2.start();
     }
 }
+//->we can acquire lock at any place and release at any place.
+//->solve starvation problem(indefinite waiting) control waiting time
+//-> fairness mechanism -> pehla aao pehla pao

@@ -1,0 +1,6 @@
+->Shared Lock :Read Lock
+->Exclusive Lock : Read + Write;
+
+1)If a thread acquire a shared lock then other thread can also acquired shared lock and read the value.
+2)If a thread acquire a shared lock then other thread can not acquire the exclusive lock.
+3)Only one thread can acquire a exclusive lock.
