@@ -7,20 +7,19 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class Main {
     public static void main(String[] args) throws  Exception {
-        SharedResources sharedResources = new SharedResources();
+
         ReentrantLock lock = new ReentrantLock();
+        SharedResources sharedResources = new SharedResources(lock);
+
+
         Runnable adder = ()->{
-            //ock.lock();
-            for(int i=1;i<=10;i++){
-                sharedResources.increaseCount(i, lock);
-            }
+            //lock.lock()
+            sharedResources.increaseCount();
             //lock.unlock();
         };
         Runnable substractor = ()->{
-           // lock.lock();
-            for(int i=1;i<=10;i++){
-                sharedResources.decreaseCount(i, lock);
-            }
+           // lock.lock()
+            sharedResources.decreaseCount();
             //lock.unlock();
         };
 
@@ -28,11 +27,18 @@ public class Main {
         th.setName("Adder Thread");
 
 
+
         Thread th1 = new Thread(substractor);
         th1.setName("Substractor Thread");
 
         th.start();
         th1.start();
+
+
+
+
+        th.join();
+        th1.join();
 
 
         System.out.println(sharedResources.Count);
